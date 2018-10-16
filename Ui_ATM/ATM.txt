@@ -1,0 +1,8 @@
+create database ATM;
+use ATM;
+
+create table login(C_num varchar(10) primary key,pswd varchar(10));
+insert into login values("1234567890","0987654321"),("1234567891","1987654321");
+
+create table info(A_Id varchar(10) primary Key,Full_Name varchar(50),Amount float(10,4),foreign key(A_Id) references login(C_Num));
+insert into info values("1234567890","Vishwas Mohan",100000),("1234567891","Vrishab M Sharma",900000);
